@@ -27,10 +27,34 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue, // Set your branding background color
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("HOMEBREW"), Text("Great Coffee at Home")],
+        child: AnimatedOpacity(
+          opacity: 1.0, // Start with 0.0 for hidden and increase to 1.0 for visible
+          duration: Duration(seconds: 1),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "HOMEBREW",
+                style: TextStyle(
+                  color: Colors.white, // Set your branding text color
+                  fontSize: 48, // Adjust text size
+                  fontWeight: FontWeight.w400, // Font weight: regular
+                  fontFamily: 'Norwester', // Use the Norwester font
+                ),
+              ),
+              Text(
+                "Great Coffee at Home",
+                style: TextStyle(
+                  color: Colors.white, // Set your branding text color
+                  fontSize: 18, // Adjust text size
+                  fontWeight: FontWeight.w400, // Font weight: regular
+                  fontFamily: 'Kollektif', // Use the Kollektif font
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
